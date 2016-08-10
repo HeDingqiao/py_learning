@@ -23,10 +23,6 @@ class SpiderMain(object):
             except:
                 print('craw faild')
          self.outputer.output_html()
-
-
-
-
 if __name__=="__main__":
     root_url="http://baike.baidu.com/link?url=IR_BZBmRfoV28zQtBEPdIrUlbDfypV5FHNUevIkNv_7J4cvZiMzgCsLPzd6JxiT6jdtP80kez_QgbyBmEn_de_"
     obj_spider=SpiderMain()

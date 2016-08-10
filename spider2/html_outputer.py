@@ -5,7 +5,7 @@ class HtmlOutputer(object):
         if data is None
             return
         self.datas.append(data)
-    def oytput_html(self):
+    def output_html(self):
         fout=open('output.html','w')
         fout.write("<html>")
         fout.write("<body>")
