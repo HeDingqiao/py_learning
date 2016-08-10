@@ -31,14 +31,14 @@ def getRandomExternalLinks(startingPage):
         return getNextExternalPage(internalLinks[random.randint(0,len(internalLinks)-1)])
     else:
         return externalLinks[random.randint(0,len(externalLinks)-1)]
-def getNextExternalPage(intern)
+def getNextExternalPage(intern):
     html=urlopen(intern)
     soup=BeautifulSoup(html)
     ex=getExternalLinks(soup,splitAddress(intern)[0])
     return getExternalLinks(ex[random.randint(0,len(ex)-1)])
 def followExternalOnly(startingSite):
     externalLink=getRandomExternalLinks("http://www.baidu.com")
-    print("Random external link is"+externalLink)
+    print("Random external link is "+externalLink)
     followExternalOnly(externalLink)
 followExternalOnly("http://www.baidu.com")
 
